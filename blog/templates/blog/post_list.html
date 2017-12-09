@@ -2,11 +2,22 @@
     <head>
         <title>Django Girls</title>
     </head>
+    <style>
+        h2 {
+        color: red
+        }
+    </style>
     <body>
         <div>
             <h1><a href="">Django Girls Blog</a></h1>
         </div>
 
     <img src="https://img.clipd.com/quill/3/b/e/e/b/7/3beeb7e6c4f80acc7fb775ba541506e669eed062.jpg" />
+    {% for post in object_list %}
+        <h2> {{post.author}}</h2>
+        <p>{{ "lubie gita" }}</p>
+        <p> {{ post.text }}</p>
+        <h1>{{ forloop.counter }}</h1>
+    {% endfor %}
     </body>
 </html>
